@@ -1,0 +1,67 @@
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: TRACE
+    org.springframework.security.oauth2: TRACE
+spring:
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:9000
+#            public-key-location: classpath:key.pub
+  redis:
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器端口号
+    port: 6379
+    # 使用的数据库索引，默认是0
+    database: 0
+    # 连接超时时间
+    timeout: 1800000
+    # 设置密码
+    password: skyworth123
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          google:
+#            provider: google
+#            client-id: 273221647301-racglb8a3u2erd9jlsfilesdaj4f5gc4.apps.googleusercontent.com
+#            client-secret: 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
+#            scope: https://www.googleapis.com/auth/userinfo.profile
+#            redirect-uri: https://localhost:8443/login
+#            authorization-grant-type: code
+#          login-client-1:
+#            provider: spring1
+#            client-id: login-client
+#            client-secret: openid-connect
+#            client-authentication-method: client_secret_basic
+#            authorization-grant-type: authorization_code
+#            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
+#            scope: openid,profile
+#            client-name: spring1
+#          login-client-2:
+#            provider: spring2
+#            client-id: login-client
+#            client-secret: openid-connect
+#            client-authentication-method: client_secret_basic
+#            authorization-grant-type: authorization_code
+#            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
+#            scope: openid,profile
+#            client-name: spring2
+#        provider:
+#          google:
+#            authorization-uri: https://accounts.google.com/o/oauth2/auth
+#            token-uri: https://www.googleapis.com/oauth2/v3/token
+#            user-info-uri: https://www.googleapis.com/oauth2/v2/userinfo
+#          spring1:
+#            authorization-uri: http://localhost:9000/oauth2/authorize
+#            token-uri: http://localhost:9000/oauth2/token
+#            jwk-set-uri: http://localhost:9000/oauth2/jwks
+#          spring2:
+#            authorization-uri: http://localhost:9000/oauth2/authorize
+#            token-uri: http://localhost:9000/oauth2/token
+#            jwk-set-uri: http://localhost:9000/oauth2/jwks
+
